@@ -1,0 +1,15 @@
+tracker_type: botsort # tracker type, ['botsort', 'bytetrack']
+track_high_thresh: 0.5 # threshold for the first association
+track_low_thresh: 0.2 # threshold for the second association
+new_track_thresh: 0.7 # threshold for init new track if the detection does not match any tracks
+track_buffer: 30 # buffer to calculate the time when to remove tracks
+match_thresh: 0.8 # threshold for matching tracks
+fuse_score: True # Whether to fuse confidence scores with the iou distances before matching
+
+
+# BoT-SORT settings
+gmc_method: sparseOptFlow 
+proximity_thresh: 0.5
+appearance_thresh: 0.25
+with_reid: True
+appearance_descriptor_weight: osnet_x0_25_msmt17.pth
